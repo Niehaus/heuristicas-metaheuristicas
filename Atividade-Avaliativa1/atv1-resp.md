@@ -1,16 +1,16 @@
-# Atividade Avaliativa Nº 1
+# Atividade Avaliativa Nº 1 - Bárbara Boechat 
 
-Nome: Bárbara Belize Moreira Boechat 
+
 ## Questão 1
-  ### Letra A) 
+### Letra A) 
   Um vetor solução s de tamanho n, sendo n o número de vértices, sendo as cidades numeradas de 1 a n. Para assim, armazenar a rota solução que o algoritmo deve gerar, o retorno à origem é subentendido.  
   
-  ### Letra B)
+### Letra B)
   ![alt text](https://raw.githubusercontent.com/Niehaus/heuristicas-metaheuristicas/master/Atividade-Avaliativa1/WhatsApp%20Image%202020-09-25%20at%2023.50.43(1).jpeg)
   ![alt text](https://raw.githubusercontent.com/Niehaus/heuristicas-metaheuristicas/master/Atividade-Avaliativa1/WhatsApp%20Image%202020-09-25%20at%2023.50.43.jpeg)
 
     
- ### Letra C)
+### Letra C)
   - Forma-se um vetor de cidades e o ordena de a 1 n, inicia o algoritmo a partir do primeiro item do vetor;
   - Utiliza o vizinho mais próximo para determinar o ciclo, porém para garantir que a rota de um ciclo será quebrada, deve-se somar um valor AMAX às arestas que não pertencerem ao mesmo grupo, este valor pode ser estipulado com base nos pesos das arestas da instância, usando por exemplo a maior aresta de todo o grafo;
   - Após formar o ciclo, o calculo da Fo deve ser feito pelo caminho contrário, ou seja, pela subtração do valor AMAX aos ij não pertencentes ao mesmo grupo.
