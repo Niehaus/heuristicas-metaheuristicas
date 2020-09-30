@@ -389,26 +389,70 @@ void busca_local_primeiro_aprimorante(int n, int *s, double *p, double *w, doubl
 			fo_vizinho = calcula_fo(s, n, p, w, b);
 			if (fo_vizinho > fo_original) {
 				melhoria = 1;
-				printf("oie");
+				fo_original = fo_vizinho;
+				printf("vizinho melhor! FO = %lf\n", fo_vizinho);
 				break;
 			}
-			
+			//destroca bit
+			troca_bit(s, i);
 		}
-		
-
 	}
-	
-
 }
 
 /* aplica busca local pela estrategia do melhor aprimorante */
 void busca_local_melhor_aprimorante(int n, int *s, double *p, double *w, double b)
 {
+	int melhoria = 1;
+	double fo_original;
+	double fo_vizinho;	
+	double foMax;
+	int melhor_bit;
 
+	while (melhoria) {
+		melhoria = 0;
+		foMax = -DBL_MAX;
+		for (int i = 0; i < n; i++) {
+			troca_bit(s, i);
+			fo_vizinho = calcula_fo(s, n, p, w, b);
+			if (fo_vizinho > foMax) {
+				foMax = fo_vizinho;
+				melhor_bit = i;
+			}
+
+			//destroca bit
+			troca_bit(s, i);	
+		}
+			
+		if (foMax > fo_original) {
+			troca_bit(s, melhor_bit);
+			melhoria = 1;
+			fo_original = foMax;
+		}
+	}
 }
 
 /* aplica busca local pela estrategia randomica */
-void busca_local_randomica(int n, int *s, double *p, double *w, double b, int iter_max)
-{
+void busca_local_randomica(int n, int *s, double *p, double *w, double b, int iter_max) {
     
+	int melhoria = 1;
+	int pos;
+	double fo_original;
+	double fo_vizinho;	
+	int count_iter;
+
+	count_iter = 0;
+	fo_original = calcula_fo(s, n, p, w, b);
+	while (count_iter < iter_max)	{
+		count_iter += 1;
+		pos = (float) rand()/RAND_MAX * n; 
+		troca_bit(s, pos);
+		fo_vizinho = calcula_fo(s, n, p, w, b);
+		if (fo_vizinho > fo_original) {
+			count_iter = 0;
+			fo_original = fo_vizinho;
+			break;
+		}else {
+			troca_bit(s, pos);
+		}		
+	}
 }
