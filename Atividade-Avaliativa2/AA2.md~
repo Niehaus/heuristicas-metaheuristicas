@@ -1,0 +1,8 @@
+## Questão 1 - Explique e exemplifique o que é ótimo local, ótimo global e sensibilidade à solução inicial em uma busca local
+
+Ótimo local é uma solução no espaço de busca a qual não possui nenhum vizinho que melhora a função objetivo, não sendo necessariamente a melhor solução da instância do problema, mas pode acontecer. Já o ótimo global é a melhor solução no espaço de busca da instância. E a sensibilidade na busca local é o fato da solução poder variar conforme a entrada escolhida para o problema, ou seja, ela é afetada pela solução inicial na instância. 
+
+## Questão 2 - O  problema  do  empacotamento  (Bin  Packing  Problem-BPP)consiste  em  empacotar  um conjunto  de nobjetos  de  diferentes  tamanhos  em  recipientes  ou  caixas  de  tamanho  fixo V, minimizando o número de caixas utilizadas.
+
+### a) Desenvolva uma representação para o problema
+    
