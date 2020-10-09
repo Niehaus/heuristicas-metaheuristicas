@@ -43,6 +43,8 @@ Nesta vizinhança o movimento a ser aplicado consiste em trocar o um item aleato
 | 5 | 1 | 0 | 0 | 0 |
 
 e aplicação de um movimento tendo sorteado o item 1 para inserir  no pacote 4 resultaria no vizinho:
+
+
 | X | 1 | 2 | 3 | 4 |
 |--|--|--|--|--|
 | 1 | 0 | 0 | 0 | 1 |
@@ -57,6 +59,7 @@ Nesta vizinhança o movimento a ser aplicado seria sortear dois pacotes diferent
 
 Exemplo: Para 4 caixas com capacidade C = 5, um vetor S = [1, 0, 1, 1], deseja-se alocar 5 itens de tamanho t = 2 cada, de modo que uma solução inicial seria:
 
+
 | X | 1 | 2 | 3 | 4 |
 |--|--|--|--|--|
 | 1 | 1 | 0 | 0 | 0 |
@@ -66,6 +69,8 @@ Exemplo: Para 4 caixas com capacidade C = 5, um vetor S = [1, 0, 1, 1], deseja-s
 | 5 | 1 | 0 | 0 | 0 |
 
 e aplicação de um movimento tendo sorteado o item 1 e o item 3:
+
+
 | X | 1 | 2 | 3 | 4 |
 |--|--|--|--|--|
 | 1 | 0 | 0 | 0 | 1 |
