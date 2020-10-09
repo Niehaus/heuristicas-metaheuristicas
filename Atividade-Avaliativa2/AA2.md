@@ -7,9 +7,17 @@ Na imagem a seguir é possível visualizar exemplos ótimos locais das vizinhan�
 
 ![alt text](https://raw.githubusercontent.com/Niehaus/heuristicas-metaheuristicas/master/Atividade-Avaliativa2/Screenshot_2020-10-09%20aula5%20pptx%20-%20aula5%20pdf.png)
 
-## Questão 2 - O  problema  do  empacotamento  (Bin  Packing  Problem-BPP)consiste  em  empacotar  um conjunto  de nobjetos  de  diferentes  tamanhos  em  recipientes  ou  caixas  de  tamanho  fixo V, minimizando o número de caixas utilizadas.
+## Questão 2 - O  problema  do  empacotamento  (Bin  Packing  Problem-BPP) consiste  em  empacotar  um conjunto  de nobjetos  de  diferentes  tamanhos  em  recipientes  ou  caixas  de  tamanho  fixo V, minimizando o número de caixas utilizadas.
 
 ### a) Desenvolva uma representação para o problema:
+
+Uma representação seria um vetor S, sendo Si = 1 se o pacote i foi usado e uma matriz X, para guardar qual item j foi guardado no pacote i sendo j, fazendo Xij = 1, 
+caso não haja pacote Xij = 0.
+
+### b) Proponha  uma fórmula para  o  cálculo  da  função  objetivo  do  problema,  com  uso  de penalização se necessário.
+
+Dado um conjunto de pacotes S, cada um de mesma capacidade C, e uma lista de n itens de tamanhos t1,...,tn a serem empacotados, deve-se se encontrar P pacotes tal que P =  
+
 
 
    
