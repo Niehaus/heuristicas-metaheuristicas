@@ -16,7 +16,10 @@ caso não haja pacote Xij = 0.
 
 ### b) Proponha  uma fórmula para  o  cálculo  da  função  objetivo  do  problema,  com  uso  de penalização se necessário.
 
-Dado um conjunto de pacotes S, cada um de mesma capacidade C, e uma lista de n itens de tamanhos t1,...,tn a serem empacotados, deve-se se encontrar P pacotes tal que P =  
+Dado um conjunto de pacotes S, cada um de mesma capacidade C, e uma lista de n itens de tamanhos t1,...,tn a serem empacotados, deve-se se encontrar P pacotes tal que ![alt text](https://raw.githubusercontent.com/Niehaus/heuristicas-metaheuristicas/master/Atividade-Avaliativa2/math-20201009(1).png). 
+Sendo assim uma possível fórmula para cálculo da função objetivo é: 
+
+
 
 
 
