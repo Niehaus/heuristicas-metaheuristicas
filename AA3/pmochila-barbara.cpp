@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 
 	clock_t t; //variável para armazenar tempo
 	FILE *fp; 
-	fp = fopen("resultados02.txt", "a+"); 
+	fp = fopen("resultados03.txt", "a+"); 
 	
 
 	fprintf(fp, "%d,", n);

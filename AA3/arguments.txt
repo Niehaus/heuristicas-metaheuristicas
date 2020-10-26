@@ -1,7 +1,8 @@
-./main 100 ./large-scale/p01_100_c.txt ./large-scale/p01_100_w.txt ./large-scale/p01_100_p.txt
-./main 200 ./large-scale/p01_200_c.txt ./large-scale/p01_200_w.txt ./large-scale/p01_200_p.txt
-./main 500 ./large-scale/p01_500_c.txt ./large-scale/p01_500_w.txt ./large-scale/p01_500_p.txt
-./main 1000 ./large-scale/p01_1000_c.txt ./large-scale/p01_1000_w.txt ./large-scale/p01_1000_p.txt
-./main 2000 ./large-scale/p01_2000_c.txt ./large-scale/p01_2000_w.txt ./large-scale/p01_2000_p.txt
-./main 5000 ./large-scale/p01_5000_c.txt ./large-scale/p01_5000_w.txt ./large-scale/p01_5000_p.txt
-./main 10000 ./large-scale/p01_10000_c.txt ./large-scale/p01_10000_w.txt ./large-scale/p01_10000_p.txt
+./main 100 ./large-scale/p03_100_c.txt ./large-scale/p03_100_w.txt ./large-scale/p03_100_p.txt
+./main 200 ./large-scale/p03_200_c.txt ./large-scale/p03_200_w.txt ./large-scale/p03_200_p.txt
+./main 500 ./large-scale/p03_500_c.txt ./large-scale/p03_500_w.txt ./large-scale/p03_500_p.txt
+./main 1000 ./large-scale/p03_1000_c.txt ./large-scale/p03_1000_w.txt ./large-scale/p03_1000_p.txt
+./main 2000 ./large-scale/p03_2000_c.txt ./large-scale/p03_2000_w.txt ./large-scale/p03_2000_p.txt
+./main 5000 ./large-scale/p03_5000_c.txt ./large-scale/p03_5000_w.txt ./large-scale/p03_5000_p.txt
+./main 10000 ./large-scale/p03_10000_c.txt ./large-scale/p03_10000_w.txt ./large-scale/p03_10000_p.txt
+

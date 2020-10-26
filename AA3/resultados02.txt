@@ -1,1 +1,0 @@
-n_entradas, grasp_pr, t_grasp_pr, grasp, t_grasp
