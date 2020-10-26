@@ -876,8 +876,6 @@ void path_relinking(int *xs, int *xt, int n, double *p, double *w, double b) {
 		troca_bit(x, calc_pos(x, xt, n));
 		// imprime_caminho(x, xt, n);
 		if (calcula_fo(x, n, p, w, b) > fo_min) {
-			// printf("Intermediaria é melhor!! ");
-			// printf(" %lf\n", calcula_fo(x, n, p, w, b));
 			fo_min = calcula_fo(x, n, p, w, b);
 			for (int i = 0; i < n; i++) x_fo_min[i] = x[i];
 		}
