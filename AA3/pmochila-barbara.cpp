@@ -37,125 +37,23 @@ int main(int argc, char **argv)
 	fo_star = - DBL_MAX; // inicializa FO da melhor solucao
 
 	clock_t t; //variável para armazenar tempo
-
-	// do {
-	// 	choice = menu_principal();
-	// 	switch (choice) {
-	// 		case 1: /* Geracao de uma solucao inicial */
-	// 			switch(menu_construtivo()) {
-	// 				case 1: /* Geracao gulosa de uma solucao inicial */
-	// 					constroi_solucao(n,s,p,w,b,0);
-	// 					printf("Solucao construida de forma gulosa:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 2: /* Geracao parcialmente gulosa de uma solucao inicial */
-	// 					constroi_solucao(n,s,p,w,b,0.50);
-	// 					printf("Solucao construida de forma parcialmente gulosa:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 3: /* Geracao aleatoria de uma solucao inicial viavel */
-	// 					constroi_solucao(n,s,p,w,b,1);
-	// 					printf("Solucao viavel construida de forma aleatoria:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 4: /* Geracao aleatoria de uma solucao inicial */
-	// 					constroi_solucao_aleatoria(n,s,p,w,b);
-	// 					printf("Solucao construida de forma aleatoria:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 			}
-	// 			break;
-	// 		case 2: /* Busca Local */
-	// 			switch (menu_busca_local()) {
-	// 				case 1: /* Primeiro aprimorante */
-	// 					busca_local_primeiro_aprimorante(n,s,p,w,b);
-	// 					printf("Solucao refinada pela busca local do Primeiro Aprimorante:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 2: /* Melhor aprimorante */
-	// 					busca_local_melhor_aprimorante(n,s,p,w,b);
-	// 					printf("Solucao refinada pela busca local do Melhor Aprimorante:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 3: /* Randomica */
-	// 					busca_local_randomica(n,s,p,w,b,10);
-	// 					printf("Solucao refinada pela busca local Randomica:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				default:
-	// 					break;
-	// 			}
-	// 			break;
-	// 		case 3: /* Metaheuristicas */
-	// 			switch (menu_metaheuristicas()) {
-	// 				case 1: /* VND */
-	// 					VND(n,s,p,w,b);
-	// 					printf("Solucao do VND:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 2: /* VNS */
-	// 					VNS(n,s,p,w,b, 100);
-	// 					printf("Solucao do VNS:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-    //                 			case 3: /* Multi Start */
-	// 					MultiStart(n,s,p,w,b,100);
-	// 					printf("Solucao do Multi Start:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 4: /* ILS */
-	// 					ILS(n,s,p,w,b,50);
-	// 					printf("Solucao do ILS:\n");
-	// 					imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				case 5: /* GRASP */
-						
-	// 					printf("GRASP PR: ");
-	// 					t = clock(); //armazena tempo
-	// 					grasp_pr(n, s, p, w, b, 50, 0.7);
-	// 					t = clock() - t; //tempo final - tempo inicial
-	// 					//imprime o tempo na tela
-	// 					printf("Tempo de execucao: %lf\n", ((double)t) / ((CLOCKS_PER_SEC / 1000))); //conversão para double
-						
-	// 					printf("\n\n\n");
-	// 					printf("GRASP: ");
-	// 					t = clock(); //armazena tempo
-	// 					grasp(n, s, p, w, b, 50, 0.7);
-	// 					t = clock() - t; //tempo final - tempo inicial
-	// 					//imprime o tempo na tela
-	// 					printf("Tempo de execucao: %lf", ((double)t) / ((CLOCKS_PER_SEC / 1000)));
-	// 					// printf("Solucao do GRASP:\n");
-	// 					// imprime_solucao(s,n,p,w,b);
-	// 					break;
-	// 				default:
-	// 					break;
-	// 			}
-	// 			break;
-	// 		default:
-	// 			break;
-	// 	}
-	// } while (choice != 0);
-
-	FILE *fp;
-
-	fp = fopen("resultados2.txt", "a+");
+	FILE *fp; 
+	fp = fopen("resultados02.txt", "a+"); 
 	
+
 	fprintf(fp, "%d,", n);
-	// printf("\nGRASP PR: ");
 	t = clock(); //armazena tempo
 	grasp_pr(n, s, p, w, b, 50, 0.7, fp);
 	t = clock() - t; //tempo final - tempo inicial
-	//imprime o tempo na tela
-	// printf("Tempo de execucao: %lf\n", ((double)t) / ((CLOCKS_PER_SEC / 1000))); //conversão para double
+	// printf("Tempo de execucao: %lf\n", ((double)t) / ((CLOCKS_PER_SEC / 1000))); //conversão para double - imprime o tempo na tela
 	fprintf(fp, "%lf",((double)t) / ((CLOCKS_PER_SEC / 1000)));
-	// printf("\n\n\n");
-	// printf("GRASP: ");
+
+
 	t = clock(); //armazena tempo
 	grasp(n, s, p, w, b, 50, 0.7, fp);
 	t = clock() - t; //tempo final - tempo inicial
-	//imprime o tempo na tela
 	fprintf(fp, ", %lf\n",((double)t) / ((CLOCKS_PER_SEC / 1000)));
-	// printf("Tempo de execucao: %lf\n", ((double)t) / ((CLOCKS_PER_SEC / 1000)));
+	// printf("Tempo de execucao: %lf\n", ((double)t) / ((CLOCKS_PER_SEC / 1000))); 	//imprime o tempo na tela
 
 	// Libera memoria
 	free(s);
@@ -456,78 +354,6 @@ void perturbacao(int n, int *s, double *p, double *w, double b, double pert)
 }
 
 /******************************************************************************************/
-/*				MENUS							  */
-/******************************************************************************************/
-
-// Menu principal
-int menu_principal(void)
-{
-	int escolha;
-	
-	do {
-		printf("\n************************************************* \n");
-		printf("         1. Gere solucao inicial \n");
-		printf("         2. Busca Local \n");
-		printf("         3. Metaheuristicas \n");
-		printf("         0. Sair \n");
-		printf("         Escolha: ");
-		if (!scanf("%d",&escolha)) printf("Falha na leitura!\n");
-	} while (escolha < 0 || escolha > 3);
-	return escolha;
-}
-
-// Menu de geracao de uma solucao inicial
-int menu_construtivo(void)
-{
-    int escolha;
-    
-    do {
-        printf("\nGERACAO DA SOLUCAO INICIAL: \n");
-        printf("                  1. Gulosa \n");
-        printf("                  2. Parcialmente gulosa\n");
-        printf("                  3. Aleatoria viavel\n");
-        printf("                  4. Aleatoria\n");
-        printf("                  escolha: ");
-        if (!scanf("%d",&escolha)) printf("Falha na leitura!\n");
-    } while (escolha < 1 || escolha > 4);
-    return escolha;
-}
-
-// Menu de busca local
-int menu_busca_local(void)
-{
-	int escolha;
-	
-	do {
-		printf("\nBUSCA LOCAL: \n");
-		printf("                  1. Primeiro Aprimorante \n");
-		printf("                  2. Melhor Aprimorante\n");
-		printf("                  3. Randomica\n");
-		printf("                  escolha: ");
-		if (!scanf("%d",&escolha)) printf("Falha na leitura!\n");
-	} while (escolha < 1 || escolha > 3);
-	return escolha;
-}
-
-// Menu de metaheuristicas
-int menu_metaheuristicas(void)
-{
-	int escolha;
-	
-	do {
-		printf("\nMETAHEURISTICAS: \n");
-		printf("                  1. VND \n");
-		printf("                  2. VNS\n");
-		printf("                  3. Multi Start\n");
-		printf("                  4. ILS\n");
-		printf("                  5. GRASP\n");
-		printf("                  escolha: ");
-		if (!scanf("%d",&escolha)) printf("Falha na leitura!\n");
-	} while (escolha < 1 || escolha > 5);
-	return escolha;
-}
-
-/******************************************************************************************/
 /*				CONSTRUTIVOS						  */
 /******************************************************************************************/
 
@@ -756,8 +582,7 @@ void busca_local_randomica(int n, int *s, double *p, double *w, double b, int it
 }
 
 /* aplica busca local pela estrategia do melhor aprimorante */
-void busca_local_melhor_aprimorante_N2(int n, int *s, double *p, double *w, double b)
-{
+void busca_local_melhor_aprimorante_N2(int n, int *s, double *p, double *w, double b) {
 	
 	printf("\n\n***************** VIZINHANCA N2 *****************\n\n");
 	
@@ -1106,12 +931,6 @@ void gera_lista_elite(Arraylist lista_elite, int *sl, int n, double *p, double *
 		arraylist_add(lista_elite, aux);
 		
 	}
-	// }
-	// for (int k = 0; k <  arraylist_size(lista_elite); k++) {
-	// 	printf("pos da lista elite = %d |", k);
-	// 	for (int i = 0; i < n; i++) 		
-	// 		printf(" %d", ((int *)arraylist_get(lista_elite, k))[i]);
-	// }
 }
 
 void pos_otimizacao(Arraylist lista_elite, int n, int *s, double *p, double *w, double b) {
@@ -1121,11 +940,9 @@ void pos_otimizacao(Arraylist lista_elite, int n, int *s, double *p, double *w, 
 			path_relinking((int *)arraylist_get(lista_elite, i), (int *)arraylist_get(lista_elite, j), n, p, w, b);
 			gera_lista_elite(lista_elite, (int *)arraylist_get(lista_elite, i), n, p, w, b);
 			if (calcula_fo((int *)arraylist_get(lista_elite, i), n, p, w, b) > calcula_fo(s, n, p, w, b) ) {
-				// printf("Pos-Otimizacao: Atualiza FO \n");
 				for (int k = 0; k < n; k++){
 					s[k] = ((int *)arraylist_get(lista_elite, i))[k];
 				}
-				// printf("%lf \n", calcula_fo((int *)arraylist_get(lista_elite, i), n, p, w, b));
 			}
 		}
  	}
@@ -1179,60 +996,10 @@ void grasp_pr(int n, int *s, double *p, double *w, double b, int iter_max, doubl
 	// printf("FO Pos Otimizacao: %lf\n", calcula_fo(sl, n, p, w, b));
 	// printf("FO Anterior %lf\n", fo_star);
 	if (calcula_fo(sl, n, p, w, b) > fo_star) {
-		// printf("Atualiza FO:");
 		for (int i = 0; i < n; i++)
 			s[i] = sl[i];
-		// atualiza fo
 		fo_star = calcula_fo(s, n, p, w, b);
-		// printf(" %lf\n", fo_star);
-	}else {
-		// printf("FO Se Mantem ");
-		// printf("Melhor FO %lf\n", fo_star);
 	}
-
 	// printf("Solucao: %lf\n", calcula_fo(s, n, p, w, b));
 	fprintf(fp, "%lf,", fo_star);
 }
-
-// for (int k = 0; k <  arraylist_size(lista_elite); k++) {
-// 	printf("\npos da lista elite = %d |", k);
-// 	for (int i = 0; i < n; i++)
-// 		printf(" %d", ((int *)arraylist_get(lista_elite, k))[i]);
-// }
-// so com path reliking p/ intensificação
-// /* aplica metaheuristica GRASP */
-// void grasp_pr_intensif(int n, int *s, double *p, double *w, double b, int iter_max, double alfa) {
-// 	int *sl, *best_sol_path;
-// 	double fo_star = -DBL_MAX;
-
-// 	// cria solucao auxiliar
-// 	sl = (int *)malloc(n * sizeof(int));
-// 	best_sol_path = (int *)malloc(n * sizeof(int));
-
-// 	// Enquanto melhoria
-// 	for (int i = 0; i < iter_max; i++)	{
-
-// 		// Limpa solucao
-// 		for (int j = 0; j < n; j++)
-// 			sl[j] = 0;
-
-// 		// Constroi solucao parcialmente gulosa
-// 		constroi_solucao_grasp(n, sl, p, w, b, alfa);
-// 		// printf("solucao construida: %lf\t", calcula_fo(sl, n, p, w, b));
-
-// 		// Aplica busca local na solucao construida
-// 		VND(n, sl, p, w, b);
-// 		if (i > 2) {
-// 			path_relinking(sl, s, n, p, w, b);
-// 		}
-// 		// Atualiza melhor solucao
-// 		if (calcula_fo(sl, n, p, w, b) > fo_star) {
-// 			// copia em s a melhor solucao
-// 			for (int i = 0; i < n; i++)
-// 				s[i] = sl[i];
-
-// 			// atualiza fo
-// 			fo_star = calcula_fo(sl, n, p, w, b);
-// 		}
-// 	}
-// }
