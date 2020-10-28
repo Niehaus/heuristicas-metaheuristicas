@@ -5,7 +5,6 @@ Para rodar este trabalho basta utilizar `./runme.sh`, talvez seja necessário co
 ## Questão 1
 
 ### Forma de integração
- - Como etapa de pós-otimização entre pares de soluções elite
  - Como etapa de intensificação entre um ótimo local e uma solução elite
 
 ### Conjunto Elite
