@@ -11,7 +11,8 @@ Para rodar este trabalho basta utilizar `./runme.sh`, talvez seja necessário co
 ### Conjunto Elite
  - Tamanho fixo: 10
  - Critério de entrada de uma solução no conjunto: Desde que seja uma solução aprimorante ela deve entrar no conjunto
- - Critério de saída de uma solução do conjunto: Pior solução do conjunto já existente sairá da lista para que outro candidato entre.
+ - Critério de saída de uma solução do conjunto: Pior solução existente no conjunto sairá da lista para que outro candidato entre, 
+ desde que este seja melhor que o pior da lista.
 
 ### Direção
 - Regressiva: Tendo em vista que é uma função de maximização - do pior para o melhor - é escolhida a menor FO dentre os dois caminhos inicial e final que entram no PR
