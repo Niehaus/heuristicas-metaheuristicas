@@ -24,7 +24,7 @@ Conjuntos com N tuplas seriam representações de N rainhas em um tabuleiro. Por
 exemplo: `{(1,3),  (2,7),  (3,4),  (4,5),  (5,6),  (6,1),  (7,8),  (8,2)}`  é
 uma representação para um conjunto com N=8.
 
-inserir imagem do tabuleiro aqui 
+![](https://raw.githubusercontent.com/Niehaus/heuristicas-metaheuristicas/master/AA4/Screenshot_2020-11-07%20Algoritmo%20eficiente%20para%20valida%C3%A7%C3%A3o%20de%20solu%C3%A7%C3%B5es%20para%20o%20problema%20das%20n-rainhas%20pdf.png)
 
 
 Neste problema existe a restrição de quenenhuma rainha poderá atacar outra, de
